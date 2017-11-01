@@ -52,7 +52,7 @@ app.get('/recipes', (req, res) => {
   res.json(Recipes.get());
 })
 
-app.post('recipes', jsonParser, (req, res) => {
+app.post('/recipes', jsonParser, (req, res) => {
   const requiredFields = ['name', 'ingredients'];
   for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
